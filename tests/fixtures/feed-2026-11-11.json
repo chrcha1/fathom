@@ -1,0 +1,480 @@
+{
+ "mostread": {
+  "date": "2026-11-10Z",
+  "articles": [
+   {
+    "title": "Ramayana:_Part_1",
+    "normalizedtitle": "Ramayana: Part 1",
+    "description": "2026 Indian film by Nitesh Tiwari",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 840888,
+    "rank": 2
+   },
+   {
+    "title": "Russell_Brand",
+    "normalizedtitle": "Russell Brand",
+    "description": "English comedian, actor and media personality (born 1975)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 545717,
+    "rank": 5
+   },
+   {
+    "title": "Jensen_Huang",
+    "normalizedtitle": "Jensen Huang",
+    "description": "Taiwanese and American businessman (born 1963)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 542553,
+    "rank": 6
+   },
+   {
+    "title": "David_Walliams",
+    "normalizedtitle": "David Walliams",
+    "description": "English comedian, writer and actor (born 1971)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 512804,
+    "rank": 7
+   },
+   {
+    "title": "Thomas_Massie",
+    "normalizedtitle": "Thomas Massie",
+    "description": "American politician (born 1971)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 166628,
+    "rank": 9
+   },
+   {
+    "title": "SS_Edmund_Fitzgerald",
+    "normalizedtitle": "SS Edmund Fitzgerald",
+    "description": "Great Lakes freighter sunk in Lake Superior",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 163598,
+    "rank": 10
+   },
+   {
+    "title": "Carson_Wentz",
+    "normalizedtitle": "Carson Wentz",
+    "description": "American football player (born 1992)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 158702,
+    "rank": 11
+   },
+   {
+    "title": "Scene_(2026_film)",
+    "normalizedtitle": "Scene (2026 film)",
+    "description": "Indian film by Jithu Madhavan",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 143180,
+    "rank": 12
+   },
+   {
+    "title": "Lara_Stone",
+    "normalizedtitle": "Lara Stone",
+    "description": "Dutch fashion model (born 1983)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 139117,
+    "rank": 13
+   },
+   {
+    "title": "Deaths_in_2026",
+    "normalizedtitle": "Deaths in 2026",
+    "description": "",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 138565,
+    "rank": 14
+   },
+   {
+    "title": "Kirk_Cousins",
+    "normalizedtitle": "Kirk Cousins",
+    "description": "American football player (born 1988)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 136900,
+    "rank": 15
+   },
+   {
+    "title": "Pete_Hegseth",
+    "normalizedtitle": "Pete Hegseth",
+    "description": "American government official and television personality (born 1980)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 127687,
+    "rank": 16
+   },
+   {
+    "title": "Nvidia",
+    "normalizedtitle": "Nvidia",
+    "description": "American multinational technology company",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 123851,
+    "rank": 17
+   },
+   {
+    "title": "List_of_highest-grossing_Indian_films",
+    "normalizedtitle": "List of highest-grossing Indian films",
+    "description": "",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 122614,
+    "rank": 18
+   },
+   {
+    "title": "Abdul_El-Sayed",
+    "normalizedtitle": "Abdul El-Sayed",
+    "description": "American epidemiologist and politician (born 1984)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 119560,
+    "rank": 19
+   },
+   {
+    "title": "Godzilla_Minus_Zero",
+    "normalizedtitle": "Godzilla Minus Zero",
+    "description": "2026 Japanese film by Takashi Yamazaki",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 107366,
+    "rank": 20
+   },
+   {
+    "title": "Jemima_Goldsmith",
+    "normalizedtitle": "Jemima Goldsmith",
+    "description": "British journalist and producer",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 96742,
+    "rank": 21
+   },
+   {
+    "title": "Survivor_Series:_WarGames_(2026)",
+    "normalizedtitle": "Survivor Series: WarGames (2026)",
+    "description": "WWE premium live event",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 82896,
+    "rank": 22
+   },
+   {
+    "title": "2026_United_States_elections",
+    "normalizedtitle": "2026 United States elections",
+    "description": "",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 82516,
+    "rank": 23
+   },
+   {
+    "title": "Adrian_Peterson",
+    "normalizedtitle": "Adrian Peterson",
+    "description": "American football player (born 1985)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 82217,
+    "rank": 24
+   },
+   {
+    "title": "The_End_of_Everything_(Harrison_novel)",
+    "normalizedtitle": "The End of Everything (Harrison novel)",
+    "description": "2026 post-apocalyptic novel by M. John Harrison",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 80691,
+    "rank": 25
+   },
+   {
+    "title": "Jailer_2",
+    "normalizedtitle": "Jailer 2",
+    "description": "2026 Indian film by Nelson Dilipkumar",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 79273,
+    "rank": 26
+   },
+   {
+    "title": "Lauren_Boebert",
+    "normalizedtitle": "Lauren Boebert",
+    "description": "American politician (born 1986)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 78977,
+    "rank": 27
+   },
+   {
+    "title": "Elizabeth_Holmes",
+    "normalizedtitle": "Elizabeth Holmes",
+    "description": "American businesswoman (born 1984)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 78150,
+    "rank": 28
+   },
+   {
+    "title": "Ansel_Adams",
+    "normalizedtitle": "Ansel Adams",
+    "description": "American photographer and environmentalist (1902–1984)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 77911,
+    "rank": 29
+   },
+   {
+    "title": "Stephen_Miller",
+    "normalizedtitle": "Stephen Miller",
+    "description": "American political advisor (born 1985)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 75876,
+    "rank": 30
+   },
+   {
+    "title": "Pawan_Kalyan",
+    "normalizedtitle": "Pawan Kalyan",
+    "description": "Indian politician and actor (born 1971)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 73740,
+    "rank": 31
+   },
+   {
+    "title": "Mauricio_Pochettino",
+    "normalizedtitle": "Mauricio Pochettino",
+    "description": "Argentine football manager (born 1972)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 73306,
+    "rank": 32
+   },
+   {
+    "title": "Toukie_Smith",
+    "normalizedtitle": "Toukie Smith",
+    "description": "American actress and model (1952–2026)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 73111,
+    "rank": 33
+   },
+   {
+    "title": "VisionQuest",
+    "normalizedtitle": "VisionQuest",
+    "description": "Marvel Studios television miniseries",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 71375,
+    "rank": 34
+   },
+   {
+    "title": "Joran_van_der_Sloot",
+    "normalizedtitle": "Joran van der Sloot",
+    "description": "Dutch murderer (born 1987)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 68303,
+    "rank": 35
+   },
+   {
+    "title": "Grand_Theft_Auto_VI",
+    "normalizedtitle": "Grand Theft Auto VI",
+    "description": "Upcoming video game",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 64375,
+    "rank": 37
+   },
+   {
+    "title": "Lisa_Su",
+    "normalizedtitle": "Lisa Su",
+    "description": "Taiwanese and American business executive (born 1969)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 62648,
+    "rank": 38
+   },
+   {
+    "title": "Katy_Perry",
+    "normalizedtitle": "Katy Perry",
+    "description": "American singer (born 1984)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 62508,
+    "rank": 39
+   },
+   {
+    "title": "Jim_Jordan",
+    "normalizedtitle": "Jim Jordan",
+    "description": "American politician (born 1964)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 61400,
+    "rank": 40
+   },
+   {
+    "title": "Clayface_(film)",
+    "normalizedtitle": "Clayface (film)",
+    "description": "2026 DC Studios film",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 60783,
+    "rank": 41
+   },
+   {
+    "title": "Black_Doves",
+    "normalizedtitle": "Black Doves",
+    "description": "British spy action TV series (2024–present)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 60311,
+    "rank": 42
+   },
+   {
+    "title": "Josh_Allen",
+    "normalizedtitle": "Josh Allen",
+    "description": "American football player (born 1996)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 58820,
+    "rank": 45
+   },
+   {
+    "title": "2026_Kraków_shooting",
+    "normalizedtitle": "2026 Kraków shooting",
+    "description": "Mass shooting in Kraków, Poland",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 58545,
+    "rank": 46
+   },
+   {
+    "title": "You_Can_See_Everything",
+    "normalizedtitle": "You Can See Everything",
+    "description": "2026 documentary",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 58242,
+    "rank": 47
+   },
+   {
+    "title": "Jon_Ossoff",
+    "normalizedtitle": "Jon Ossoff",
+    "description": "American politician (born 1987)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 58166,
+    "rank": 48
+   },
+   {
+    "title": "James_Talarico",
+    "normalizedtitle": "James Talarico",
+    "description": "American politician (born 1989)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 55424,
+    "rank": 49
+   },
+   {
+    "title": "M._John_Harrison",
+    "normalizedtitle": "M. John Harrison",
+    "description": "English author and critic (born 1945)",
+    "namespace": {
+     "id": 0,
+     "text": ""
+    },
+    "views": 53336,
+    "rank": 50
+   }
+  ]
+ }
+}

@@ -1,0 +1,540 @@
+:root {
+  --bg: oklch(0.9 0.06 90);
+  --ink: oklch(0.22 0.04 90);
+  --size: 96px;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 16px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+/* ---------- the tree ---------- */
+
+#stage {
+  display: flex;
+  overflow: auto;
+  padding: 24px;
+}
+
+/* The world is exactly as large as the forest; words and art share it. */
+#world {
+  position: relative;
+  flex: none;
+  margin: auto;
+  font-family: var(--mono);
+  font-size: var(--size);
+}
+
+/* The art: three stacked grids of small characters, one per grey. */
+.field {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--mono);
+  white-space: pre;
+  pointer-events: none;
+  user-select: none;
+}
+
+.f1 {
+  opacity: 0.3;
+}
+
+.f2 {
+  opacity: 0.55;
+}
+
+.f3 {
+  opacity: 0.9;
+}
+
+.word,
+#tree .ghost {
+  position: absolute;
+  line-height: 1.3; /* keep in step with ROW_EM in layout.js */
+  white-space: pre;
+}
+
+.word {
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+
+.word.kin {
+  opacity: 0.8;
+}
+
+.word:hover,
+.word[aria-current="true"] {
+  opacity: 1;
+}
+
+/* The selected word carries a blinking cursor: this is where enter grows from. */
+.word[aria-current="true"]::after {
+  content: "_";
+  position: absolute;
+  left: 100%;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+/* A word that has been read carries a small mark; the vine above it blooms. */
+.word.read::before {
+  content: "*";
+  position: absolute;
+  right: 100%;
+  margin-right: 0.12em;
+  opacity: 0.6;
+}
+
+.solo .word {
+  cursor: default;
+}
+
+.solo .word::after {
+  content: none;
+}
+
+.ghost {
+  animation: pulse 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.12;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+/* ---------- chrome ---------- */
+
+.lenses,
+.days,
+.tools,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lenses,
+.days,
+.tools {
+  gap: 0 0.4rem;
+  font-size: 0.8125rem;
+}
+
+header {
+  padding: max(0.75rem, env(safe-area-inset-top)) 1rem 0;
+}
+
+.lenses button,
+.days button,
+.tools button {
+  padding: 0.55rem 0.5rem;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.lenses button:hover,
+.days button:hover,
+.tools button:hover,
+.lenses button[aria-pressed="true"] {
+  opacity: 1;
+}
+
+.lenses button[aria-pressed="true"] {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* On an earlier day the lenses have nothing to choose: its words are set. */
+.past .lenses {
+  visibility: hidden;
+}
+
+/* The journal: which day's tree is on screen. */
+.days {
+  align-items: center;
+}
+
+.days span {
+  min-width: 7ch;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.days .off {
+  visibility: hidden;
+}
+
+/* What the selected word is, and why it is here. */
+#caption {
+  min-height: 5.6em;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#caption p {
+  max-width: 76ch;
+  margin: 0 auto;
+  text-wrap: balance;
+}
+
+/* Both lines are cut short rather than allowed to push the tree away; the
+   reading view has them in full. */
+#what,
+#why {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+#what {
+  min-height: 1.4em;
+  opacity: 0.6;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+#why {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.25em;
+}
+
+a:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+#why a {
+  opacity: 0.7;
+}
+
+/* The one-line prompt for a word of your own. */
+#prompt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.75rem;
+  align-items: baseline;
+  justify-content: center;
+  padding-top: 1.1em;
+}
+
+#prompt label {
+  opacity: 0.6;
+}
+
+#own {
+  width: min(26ch, 70vw);
+  padding: 0.1rem 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  color: inherit;
+  caret-color: currentColor;
+  font: inherit;
+  font-size: 1rem; /* below 16px, phones zoom the page on focus */
+}
+
+footer {
+  padding: 0 1rem max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.actions {
+  gap: 0 0.75rem;
+}
+
+.actions button {
+  padding: 0.7rem 0.4rem;
+  transition: opacity 0.2s ease;
+}
+
+.actions button::before {
+  content: "[ ";
+  opacity: 0.45;
+}
+
+.actions button::after {
+  content: " ]";
+  opacity: 0.45;
+}
+
+.actions button:hover:not(:disabled) {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* Key hints sit inside the buttons, quieter than the label. */
+kbd {
+  display: inline-block;
+  margin-left: 0.6em;
+  font: inherit;
+  font-size: 0.75em;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+@media (hover: none) {
+  kbd {
+    display: none;
+  }
+}
+
+.actions button:disabled,
+.tools button:disabled {
+  opacity: 0.3;
+}
+
+/* ---------- the reading view ---------- */
+
+#dive {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: max(1rem, env(safe-area-inset-top)) 1.25rem max(4rem, env(safe-area-inset-bottom));
+  outline: none;
+  background: var(--bg);
+  /* Set here rather than inherited: the page fades between inks, and text
+     that is still fading must not sit on a background that has arrived. */
+  color: var(--ink);
+}
+
+.page {
+  max-width: 62ch;
+  margin: 0 auto;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.page h1,
+.page h2 {
+  margin: 0;
+  font: inherit;
+}
+
+.page h1 {
+  margin-top: 2.5rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.page p {
+  margin: 0 0 1em;
+}
+
+.page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page .what {
+  min-height: 1.6em;
+  opacity: 0.6;
+}
+
+.page .label {
+  margin: 2.25rem 0 0.5rem;
+  font-size: 0.8125rem;
+  opacity: 0.5;
+}
+
+.page .reading {
+  margin-top: 2.25rem;
+}
+
+.page .back,
+.page .more,
+.page .retry {
+  padding: 0.55rem 0;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.page .back:hover,
+.page .more:hover,
+.page .retry:hover {
+  opacity: 1;
+}
+
+.page .retry {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.questions li {
+  padding-left: 2ch;
+  text-indent: -2ch;
+}
+
+.questions li::before {
+  content: "- ";
+  opacity: 0.5;
+}
+
+.questions li + li {
+  margin-top: 0.35em;
+}
+
+/* A thread: a plus sign, the topic, and quietly what it is. */
+.thread {
+  display: block;
+  width: 100%;
+  padding: 0.3rem 0 0.3rem 2ch;
+  text-align: left;
+  text-indent: -2ch;
+}
+
+.thread .mark {
+  display: inline-block;
+  width: 2ch;
+  text-indent: 0;
+  opacity: 0.5;
+}
+
+.thread .name {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+
+.thread .dim {
+  margin-left: 1.5ch;
+  opacity: 0.55;
+}
+
+.thread:disabled .name {
+  opacity: 0.55;
+  text-decoration: none;
+}
+
+.thread:hover:not(:disabled) .mark {
+  opacity: 1;
+}
+
+#note {
+  display: block;
+  width: 100%;
+  min-height: 7.5em;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid color-mix(in oklch, var(--ink) 35%, transparent);
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 1rem; /* below 16px, phones zoom the page on focus */
+  line-height: 1.5;
+  resize: vertical;
+}
+
+#note::placeholder,
+#own::placeholder {
+  color: inherit;
+  opacity: 0.4;
+}
+
+noscript {
+  position: fixed;
+  inset: 40% 1rem auto;
+  text-align: center;
+}
+
+/* Used once to measure how wide a character is in the chosen font. */
+.probe {
+  position: absolute;
+  visibility: hidden;
+  font-family: var(--mono);
+  font-size: 100px;
+  white-space: pre;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .word {
+    transition: none;
+  }
+
+  .ghost,
+  .word[aria-current="true"]::after {
+    animation: none;
+    transition: none;
+  }
+
+  .page .ghost {
+    opacity: 0.5;
+  }
+}

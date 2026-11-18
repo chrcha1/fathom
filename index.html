@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src https://en.wikipedia.org; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>fathom</title>
+  <meta name="description" content="One current word. Go as deep as you like.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23222'/%3E%3Ctext x='16' y='27' font-family='monospace' font-size='26' text-anchor='middle' fill='%23fff'%3E*%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="lenses" aria-label="What kind of current word">
+      <button type="button" data-lens="anything" title="Everything current">anything</button>
+      <button type="button" data-lens="news" title="Reported events of the last few days">news</button>
+      <button type="button" data-lens="people" title="People in the news or being read about">people</button>
+      <button type="button" data-lens="tech" title="Science and technology">tech</button>
+      <button type="button" data-lens="culture" title="Films, series, music, books and the people who make them">culture</button>
+    </nav>
+    <nav class="days" id="days" aria-label="Days" hidden>
+      <button type="button" id="earlier" title="An earlier day ([)" aria-label="An earlier day">‹</button>
+      <span id="day">today</span>
+      <button type="button" id="later" title="A later day (])" aria-label="A later day">›</button>
+    </nav>
+  </header>
+
+  <main id="stage">
+    <div id="world">
+      <pre class="field f1" aria-hidden="true"></pre>
+      <pre class="field f2" aria-hidden="true"></pre>
+      <pre class="field f3" aria-hidden="true"></pre>
+      <div id="tree" aria-label="Word tree"></div>
+    </div>
+  </main>
+
+  <div id="caption">
+    <p id="what"></p>
+    <p id="why" role="status" aria-live="polite"></p>
+    <div id="prompt" hidden>
+      <label for="own" id="prompt-label"></label>
+      <input id="own" type="text" maxlength="60" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
+    </div>
+  </div>
+
+  <footer>
+    <div class="actions">
+      <button type="button" id="another" title="Another current word (space)">another<kbd>space</kbd></button>
+      <button type="button" id="grow" title="Branch to something this word's article leans on (enter)">branch<kbd>enter</kbd></button>
+      <button type="button" id="read" title="Read about this word (d)">dive<kbd>d</kbd></button>
+    </div>
+    <div class="tools">
+      <button type="button" id="add" title="Add a word of your own under this one (a). Shift+A starts a new tree with it.">add</button>
+      <button type="button" id="plant" title="Start a separate tree, keeping this word (n)">new tree</button>
+      <button type="button" id="swap" title="Trade this word for another thread of its parent (r)" hidden>swap</button>
+      <button type="button" id="undo" title="Undo (z)" hidden>undo</button>
+      <button type="button" id="copy" title="Copy the day as Markdown (c)" hidden>copy</button>
+      <button type="button" id="clear" title="Start today over with one word" hidden>clear</button>
+    </div>
+  </footer>
+
+  <article id="dive" tabindex="-1" aria-label="Reading view" hidden></article>
+
+  <noscript>This page needs JavaScript to fetch today's words.</noscript>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

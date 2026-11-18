@@ -1,0 +1,11 @@
+{
+  "name": "fathom",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One current word. Go as deep as you like.",
+  "scripts": {
+    "start": "python3 -m http.server 4180",
+    "test": "node --test"
+  }
+}
